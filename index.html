@@ -1,5 +1,25 @@
-<video id="video" autoplay autobuffer controls>
-    <source src="example.mp4" type="video/mp4">
-    <track src="example.vtt" kind="subtitles" label="中文字幕" srclang="zh" default>
-</video>
-<p><button onClick="video.play();">重播</button></p>
+<html>
+<head>
+    <style>
+        ::cue {
+            background: none;
+            color: #fff;
+            text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000;
+            font-size: medium;
+        }
+        ::cue(v[voice=hanhan]) {
+           color: green;
+        }
+        ::cue(.red) {
+            color: red;
+        }
+    </style>
+</head>
+    <body>
+        <video id="video" width="180" height="314" autoplay autobuffer controls>
+            <source src="example.mp4" type="video/mp4">
+            <track src="example.vtt" kind="subtitles" label="中文字幕" srclang="zh" default>
+        </video>
+        <p><button onClick="video.play();">重播</button></p>
+    </body>
+</html>
