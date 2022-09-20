@@ -1,4 +1,5 @@
-<video id="video">
+<video id="video" autoplay autobuffer controls>
     <source src="example.mp4" type="video/mp4">
-    <track src="example.vtt" default>
+    <track src="example.vtt" kind="subtitles" label="中文字幕" srclang="zh" default>
 </video>
+<p><button onClick="video.play();">重播</button></p>
